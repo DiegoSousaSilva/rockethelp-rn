@@ -1,7 +1,7 @@
 import {NativeBaseProvider, StatusBar} from 'native-base';
 //import {Loading} from './src/components/Loading';
 import {THEME} from './src/styles/theme';
-import {Routes} from './src/routes';
+import {Routes} from './src/routes/index';
 
 export default function App() {
   return (

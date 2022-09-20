@@ -5,16 +5,19 @@ import Logo from '../assets/logo_primary.svg';
 import {Button} from '../components/Button';
 import {Input} from '../components/Input';
 import {Alert} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 export function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigation = useNavigation();
   const {colors} = useTheme();
   function handleSignIn() {
     if (!email || !password) {
       return Alert.alert('Entrar', 'Informe e-mail e senha');
     }
+    navigation.navigate('home');
   }
   return (
     <VStack flex={1} alignItems="center" bg="gray.600" px={8} pt={24}>

@@ -75,7 +75,7 @@ export function Home() {
 
         <HStack space={3} mb={8}>
           <Filter
-            title="Em amdamento"
+            title="Em andamento"
             type="open"
             onPress={() => setStatusSelected('open')}
             isActive={statusSelected === 'open'}
