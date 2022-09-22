@@ -48,11 +48,11 @@ export function Register() {
       <Input
         placeholder="Número do patrimônio"
         mt={4}
-        onChangeText={patrimony}
+        onChangeText={setPatrimony}
       />
 
       <Input
-        onChangeText={description}
+        onChangeText={setDescription}
         placeholder="Descrição do problema"
         flex={1}
         mt={5}
