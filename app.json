@@ -1,4 +1,5 @@
 {
-  "name": "rockethelpdiego",
-  "displayName": "rockethelpdiego"
+  "name": "Rockethelp",
+  "displayName": "Rockethelp",
+  "plugins": ["@notifee/react-native"]
 }

@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface rockethelpdiegoTests : XCTestCase
+@interface RockethelpTests : XCTestCase
 
 @end
 
-@implementation rockethelpdiegoTests
+@implementation RockethelpTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

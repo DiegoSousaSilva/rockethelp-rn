@@ -6,12 +6,38 @@ import {Button} from '../components/Button';
 import {Input} from '../components/Input';
 import {Alert} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import notifee from '@notifee/react-native';
 
 export function Register() {
   const [isloading, setIsLoading] = useState(false);
   const [patrimony, setPatrimony] = useState('');
   const [description, setDescription] = useState('');
   const navigation = useNavigation();
+
+  async function onDisplayNotification() {
+    // Request permissions (required for iOS)
+    await notifee.requestPermission();
+
+    // Create a channel (required for Android)
+    const channelId = await notifee.createChannel({
+      id: 'default',
+      name: 'Default Channel',
+    });
+
+    // Display a notification
+    await notifee.displayNotification({
+      title: 'RocketHelp Diego',
+      body: 'Teste de notificação',
+      android: {
+        channelId,
+        smallIcon: 'name-of-a-small-icon', // optional, defaults to 'ic_launcher'.
+        // pressAction is needed if you want the notification to open the app when pressed
+        pressAction: {
+          id: 'default',
+        },
+      },
+    });
+  }
 
   function handleNewOrderRegister() {
     if (!patrimony || !description) {
@@ -29,6 +55,7 @@ export function Register() {
       })
       .then(() => {
         Alert.alert('Solicitação', 'Solicitação registrada com sucesso!');
+        onDisplayNotification();
         navigation.goBack();
       })
       .catch(error => {

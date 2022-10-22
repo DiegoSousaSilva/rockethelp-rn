@@ -1,4 +1,4 @@
-package com.rockethelpdiego.newarchitecture.modules;
+package br.com.capsulecorpsousadiego.rockethelp.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

@@ -1,4 +1,4 @@
-package com.rockethelpdiego.newarchitecture;
+package br.com.capsulecorpsousadiego.rockethelp.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.rockethelpdiego.BuildConfig;
-import com.rockethelpdiego.newarchitecture.components.MainComponentsRegistry;
-import com.rockethelpdiego.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import br.com.capsulecorpsousadiego.rockethelp.BuildConfig;
+import br.com.capsulecorpsousadiego.rockethelp.newarchitecture.components.MainComponentsRegistry;
+import br.com.capsulecorpsousadiego.rockethelp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

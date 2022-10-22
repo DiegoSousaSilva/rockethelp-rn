@@ -1,15 +1,17 @@
 {
-  "name": "rockethelpdiego",
+  "name": "Rockethelp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "build-android": "cd android && ./gradlew clean && yarn android",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@notifee/react-native": "^7.0.4",
     "@react-native-firebase/app": "^15.6.0",
     "@react-native-firebase/auth": "^15.6.0",
     "@react-native-firebase/firestore": "^15.6.0",
